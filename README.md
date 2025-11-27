@@ -27,7 +27,6 @@ A comprehensive report detailing the project's architecture, database design, in
 
 [Download the Project Report (PDF)](./report.pdf)
 
-
 ## 🚀 Setup and Installation Guide
 
 Follow these steps to set up the project on your local machine.
