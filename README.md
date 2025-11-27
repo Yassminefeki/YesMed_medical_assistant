@@ -27,8 +27,6 @@ A comprehensive report detailing the project's architecture, database design, in
 
 [Download the Project Report (PDF)](./report.pdf)
 
-**To generate the PDF report from the LaTeX source (`report.ltx`):**
-
 ## 🚀 Setup and Installation Guide
 
 Follow these steps to set up the project on your local machine.
