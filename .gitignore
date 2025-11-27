@@ -1,0 +1,17 @@
+# Environment variables - Contains sensitive data like API keys and DB passwords.
+.env
+
+# Composer dependencies - These should be installed via 'composer install'.
+/vendor/
+
+# User uploads - These are user-specific files and should not be in the repository.
+/uploads/
+/ordonnances/uploads/
+
+# IDE/Editor specific files
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db

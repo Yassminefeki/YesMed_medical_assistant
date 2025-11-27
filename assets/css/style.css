@@ -1,0 +1,1238 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables for consistent theming */
+:root {
+    --primary: #006afe; /* Updated primary blue color */
+    --secondary: #cce0ff; /* Adjusted secondary lighter blue */
+    --accent: #e6f0ff; /* Adjusted accent lighter blue */
+    --danger: #ff4d4f;
+    --text: #333;
+    --bg: #ffffff;
+    --radius: 15px;
+    --shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+}
+
+/* Reset styles for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body base styles */
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    padding-top: 0px; /* Space for the fixed navbar */
+    margin-top: -5  ; /* Ensure there's no extra margin at the top */
+}
+
+/* Header styles */
+.main-header, .custom-hero-navbar {
+    background:#006afe;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-bottom: 0px solid var(--primary);
+}
+
+/* Navbar brand logo and text */
+.custom-hero-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.custom-hero-navbar .navbar-brand .logo-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: font-size 0.3s ease;
+    padding-left: 10px;
+}
+
+.custom-hero-navbar .navbar-brand .logo-text:hover {
+    font-size: 1.8rem;
+}
+
+/* Navbar nav items */
+.custom-hero-navbar .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.custom-hero-navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: font-size 0.3s ease;
+}
+
+.custom-hero-navbar .nav-link:hover {
+    font-size: 1.2rem;
+}
+
+.main-header .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.main-header .logo-text {
+    color: white;
+    padding-right:30px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: font-size 0.3s ease;
+}
+
+.main-header .logo-text:hover {
+    font-size: 1.8rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: font-size 0.3s ease;
+}
+
+.nav-link:hover {
+    font-size: 1.2rem;
+}
+
+/* Logo styles */
+.logo-link {
+    display: block;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    PADDING-left:100PX;
+    
+}
+
+/* Navigation container */
+/* Style for the transparent, fixed navbar with centered items, smaller size, and hover effects */
+.custom-navbar {
+    background-color: #006afe; /* Transparent background (with slight opacity) */
+    border-radius: 40px; /* Smaller rounded corners */
+    padding: 0rem 0rem; /* Adjust padding to make navbar smaller */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0;
+    left: 50%; /* Position the navbar in the center horizontally */
+    transform: translateX(-50%); /* Offset to truly center the navbar */
+    width: auto; /* Navbar width will depend on its content */
+    z-index: 1000; /* Ensure the navbar stays above other elements */
+    width: 80%; /* Adjust the width to your preference (if you want a smaller width) */
+}
+
+.custom-navbar .navbar-nav {
+    display: flex;
+    justify-content: center; /* Center the items */
+    width: 100%;
+}
+
+.custom-navbar .nav-item {
+    margin: 0 1rem; /* Space between items */
+}
+
+.custom-navbar .nav-link {
+    color: white;
+    font-size: 1rem; /* Smaller font size for a compact navbar */
+    font-weight: 600;
+    transition: all 0.6s ease; /* Smooth transition for hover effect */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffffff; /* Change to your desired hover color */
+    transform: scale(1.1); /* Make the text bigger on hover */
+    font-weight: 700; /* Optional: make the text bold */
+}
+
+.custom-navbar .navbar-brand img {
+    height: 40px; /* Smaller logo size */
+    margin-LEFT: 50px; /* Space between logo and navigation */
+}
+
+
+/* Responsive menu toggle */
+.navbar-toggler {
+    border: none;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.menu-toggle {
+    display: none !important;
+}
+
+/* Responsive styles for menu toggle and nav list */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: none !important;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary);
+        width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .nav-list.active {
+        display: flex;
+    }
+    .nav-item {
+        margin: 1rem 0;
+        text-align: center;
+    }
+    .nav-link {
+        color: white;
+    }
+    .nav-link:hover {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .nav-icon {
+        color: white;
+    }
+}
+
+/* Profile icon styles */
+.profile-icon {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    background-color: var(--primary);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 48px;
+    text-align: center;
+    z-index: 1100;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+/* Profile icon hover */
+.profile-icon:hover {
+    background-color: #004ecc; /* Slightly darker blue for hover */
+}
+
+/* Responsive profile icon position */
+@media (max-width: 768px) {
+    .profile-icon {
+        right: 20px;
+    }
+}
+
+/* Profile menu container */
+#profileMenu {
+    position: fixed;
+    top: 150px;
+    right: 70px;
+    background-color: var(--bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--primary);
+    padding: 1rem 1.5rem;
+    width: 280px;
+    z-index: 1001;
+    display: none;
+    box-shadow: var(--shadow);
+}
+
+/* Profile menu active state */
+#profileMenu.active {
+    display: block;
+}
+
+/* Buttons inside profile menu */
+#profileMenu .btn {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    padding: 0.6rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+/* Primary button inside profile menu */
+#profileMenu .btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+/* Primary button hover */
+#profileMenu .btn-primary:hover {
+    background-color: #004ecc;
+}
+
+/* Outline primary button inside profile menu */
+#profileMenu .btn-outline-primary {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* Outline primary button hover */
+#profileMenu .btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Hero section styles */
+.hero-section {
+    background: linear-gradient(135deg, #006afe 0%, #cce0ff 100%);
+    color: white;
+    padding: 70px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero section heading */
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Hero section paragraph */
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #eef7ff;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Hero section buttons */
+.hero-section .btn {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hero section primary button */
+.hero-section .btn-primary {
+    background-color: #fff;
+    color: #006afe;
+    border: none;
+}
+
+/* Hero section outline primary button */
+.hero-section .btn-outline-primary {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/* Hero section image */
+.hero-section img {
+    max-width: 90%;
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
+
+/* Responsive hero section */
+@media (max-width: 768px) {
+    .hero-section .row {
+        text-align: center;
+    }
+    .hero-section .btn {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* Service section styles */
+.service-section {
+    background: linear-gradient(135deg, #006afe 0%, #cce0ff 100%);
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Service card styles */
+.service-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+/* Service card hover effect */
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Service card image */
+.service-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Service card title */
+.service-card .card-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #006afe;
+}
+
+
+
+
+
+/* Styles de base */
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 50px 20px;
+}
+
+.services-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.service {
+  position: relative;
+  width: 220px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.service img {
+  width: 120px;
+  height: 120px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+}
+
+.service img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.service-text {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About section headings */
+#services h2, #about h2, .testimonial-section h2 {
+    color: #004ecc;
+}
+
+/* About text container */
+.about-text {
+    background: linear-gradient(135deg, #ffffff 0%, #f6f6f6 100%);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* About text paragraphs */
+.about-text p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Testimonial section */
+.testimonial-section {
+    background-color: #f8f9fa;
+}
+
+/* Cards for service and testimonial */
+.card.service-card, .card.testimonial-card {
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+/* Card hover effect */
+.card.service-card:hover, .card.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonial card */
+.testimonial-card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Counter item */
+.counter-item {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Counter paragraph */
+.counter + p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: var(--text);
+}
+
+/* Footer styles */
+footer {
+    background-color: #006afe;
+    color: #ffffff;
+}
+
+/* Footer links */
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Footer link hover */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Container for content */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+/* Buttons base styles */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: #006afe;
+    color: #fff;
+}
+
+/* Primary button hover */
+.btn-primary:hover {
+    background-color: #004ecc;
+}
+
+/* Edit button */
+.btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* Edit button hover */
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+/* Delete button */
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Delete button hover */
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Styled table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table cells */
+.styled-table th, .styled-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Table header */
+.styled-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+}
+
+/* Table row hover */
+.styled-table tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Actions container buttons */
+.actions .btn {
+    margin-right: 0.5rem;
+}
+
+/* Medication container */
+.medication-container {
+    background-color: var(--bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    margin: 40px auto;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Medication container heading */
+.medication-container h2 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Add button */
+.add-btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    transition: background-color var(--transition);
+}
+
+/* Add button hover */
+.add-btn:hover {
+    background-color: #004ecc;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--accent);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+/* Table head */
+thead {
+    background-color: var(--secondary);
+}
+
+/* Table cells */
+th, td {
+    padding: 1rem;
+    text-align: left;
+    color: var(--text);
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table header cells */
+th {
+    font-weight: 600;
+}
+
+/* Links inside table cells */
+td a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Actions links */
+.actions a {
+    margin-right: 10px;
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    transition: background-color var(--transition);
+}
+
+/* Edit button inside actions */
+.actions .btn-edit {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Delete button inside actions */
+.actions .btn-delete {
+    background-color: var(--danger);
+    color: white;
+}
+
+/* Edit button hover inside actions */
+.actions .btn-edit:hover {
+    background-color: #004ecc;
+}
+
+/* Delete button hover inside actions */
+.actions .btn-delete:hover {
+    background-color: #cc2c2f;
+}
+
+/* Responsive table styles */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead {
+        display: none;
+    }
+    tr {
+        margin-bottom: 1.5rem;
+        background-color: var(--accent);
+        border-radius: var(--radius);
+        padding: 1rem;
+    }
+    td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+    }
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: 600;
+        color: var(--primary);
+    }
+}
+
+/* Form container */
+.form-container {
+    background-color: var(--bg);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto 30px auto;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Form container heading */
+.form-container h2 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+/* Input focus */
+input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+button:hover, .btn:hover {
+    background-color: #004ecc;
+}
+
+/* Anchor buttons */
+a.btn {
+    background-color: #ccc;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Anchor button hover */
+a.btn:hover {
+    background-color: #999;
+}
+
+/* Gestion RDV container */
+.gestion-rdv-container {
+    background-color: var(--bg);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto 30px auto;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Gestion RDV container heading */
+.gestion-rdv-container h2 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Actions container */
+.actions-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons inside actions container */
+.actions-container .btn {
+    margin: 0.5rem;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Actions container button hover */
+.actions-container .btn:hover {
+    background-color: #004ecc;
+}
+
+/* Calendar container */
+.calendar-container {
+    background-color: var(--bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Calendar element */
+#calendar {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+/* Responsive styles for calendar and buttons */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    .calendar-container {
+        padding: 1rem;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ordonnances grid */
+.ordonnances-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+/* Ordonnance card */
+.ordonnance-card {
+    background: var(--bg);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+    overflow: hidden;
+}
+
+/* Ordonnance card hover */
+.ordonnance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ordonnance image container */
+.ordonnance-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ordonnance image */
+.ordonnance-image img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 1rem;
+}
+
+/* Ordonnance details */
+.ordonnance-details {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Ordonnance title */
+.ordonnance-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+/* Ordonnance actions container */
+.ordonnance-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Buttons inside ordonnance actions */
+.ordonnance-actions .btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0.5rem;
+    transition: background-color var(--transition);
+}
+
+/* Ordonnance action button hover */
+.ordonnance-actions .btn:hover {
+    background-color: #004ecc;
+}
+
+/* Add button */
+.btn-add {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color var(--transition);
+}
+
+/* Add button hover */
+.btn-add:hover {
+    background-color: #004ecc;
+}
+
+/* View button */
+.btn-view {
+    background-color: #4CAF50;
+}
+
+/* View button hover */
+.btn-view:hover {
+    background-color: #45a049;
+}
+
+/* Login container */
+.login-container {
+    background-color: var(--bg);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Responsive login container */
+@media (min-width: 768px) {
+    .login-container {
+        max-width: 900px;
+    }
+}
+
+/* Login container heading */
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Medicament list container */
+.medicament-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Responsive medicament list */
+@media (min-width: 768px) {
+    .medicament-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Medicament card */
+.medicament-card {
+    background-color: var(--bg);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Responsive medicament card */
+@media (min-width: 768px) {
+    .medicament-card {
+        padding: 1.5rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Medicament card heading */
+.medicament-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Medicament card paragraph */
+.medicament-card p {
+    margin: 0.2rem 0;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dashboard Styles */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.profile-card, .quick-actions, 
+.appointments-card, .medications-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Chatbot Styles */
+.chatbot-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-toggle {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.chatbot-container {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: none;
+}
+
+.chatbot-container.show {
+    display: block;
+}
+
+/* Add more styles as needed */

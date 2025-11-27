@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargement | YesMed</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #FEFEFE, #0B0F4B, #191D55, #9EA0B7, #0B0F4B);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            overflow: hidden;
+        }
+
+        .loading-container {
+            text-align: center;
+            background: rgba(25, 29, 85, 0.7);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            width: 400px;
+            animation: fadeIn 1s ease;
+        }
+
+        .spinner {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            border: 5px solid rgba(158, 160, 183, 0.3);
+            border-radius: 50%;
+            border-top-color: #9EA0B7;
+            animation: spin 1s linear infinite;
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            color: #FEFEFE;
+            margin-bottom: 1rem;
+        }
+
+        .loading-subtext {
+            color: #9EA0B7;
+            font-size: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .progress-bar {
+            height: 6px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress {
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: #9EA0B7;
+            border-radius: 3px;
+            animation: progress 3s ease infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <img src="yesmed-logo.png" alt="YesMed Logo" class="yesmed-logo hero-logo">
+        <div class="spinner"></div>
+        <p class="loading-text">Chargement en cours...</p>
+        <p class="loading-subtext">Merci de patienter quelques instants</p>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <script>
+        // Simulation de chargement
+        // Vous pouvez remplacer ce code par votre logique de chargement réelle
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                window.location.href = 'index.html'; // Redirection vers votre page principale
+            }, 3000); // Redirection après 3 secondes (à adapter selon vos besoins)
+        });
+    </script>
+</body>
+</html>
