@@ -25,16 +25,9 @@ YesMed is a web-based medical assistant designed to help users manage their heal
 
 A comprehensive report detailing the project's architecture, database design, interfaces, and various functionalities is available.
 
-[Download the Project Report (PDF)](./report.pdf) (Requires manual compilation from `report.ltx`)
+[Download the Project Report (PDF)](./report.pdf)
 
 **To generate the PDF report from the LaTeX source (`report.ltx`):**
-
-1.  Ensure you have a LaTeX distribution (like TeX Live or MiKTeX) installed on your system.
-2.  Open your terminal or command prompt in the project's root directory.
-3.  Run the command: `pdflatex report.ltx`
-
-This will generate `report.pdf` in the same directory.
-
 
 ## 🚀 Setup and Installation Guide
 
